@@ -1,14 +1,16 @@
 import React from 'react'
+import Head from './app/components/Head'
 import Base from './app/templates/Base'
 import Home from './app/pages/Home'
 import About from './app/pages/About'
 import Error from './app/pages/Error'
-import { BrowserRouter, Route, NavLink , Switch, } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 export default class App extends React.Component {
   render() {
     return (
-      <BrowserRouter>
+      <>
+        <Head/>
         <main>
           <Base>
             <Switch>
@@ -24,7 +26,7 @@ export default class App extends React.Component {
             </Switch>
           </Base>
         </main>
-      </BrowserRouter>
+      </>
     )
   }
 }
