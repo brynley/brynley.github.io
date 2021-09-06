@@ -11,7 +11,7 @@ const Head = () => {
   return (
     <Helmet>
       <meta charSet="utf-8" />
-      <title>{pageName}</title>
+      <title>{page ==='/' ? 'Brynley Langman' : pageName}</title>
       <link rel="canonical" href={`https://bryn.cc/${pageName}`} />
     </Helmet>
   )
