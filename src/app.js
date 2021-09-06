@@ -1,7 +1,7 @@
 import React from 'react'
 import Base from './app/templates/Base'
 import Home from './app/pages/Home'
-import Login from './app/pages/Login'
+import About from './app/pages/About'
 import Error from './app/pages/Error'
 import { BrowserRouter, Route, NavLink , Switch, } from 'react-router-dom'
 
@@ -10,19 +10,19 @@ export default class App extends React.Component {
     return (
       <BrowserRouter>
         <main>
-          <Switch>
-            <Route path="/login" component={Login} />
-            <Route exact path="/">
-              <Base>
+          <Base>
+            <Switch>
+              <Route exact path="/">
                 <Home />
-              </Base>
-            </Route>
-            <Route>
-              <Base>
+              </Route>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route>
                 <Error />
-              </Base>
-            </Route>
-          </Switch>
+              </Route>
+            </Switch>
+          </Base>
         </main>
       </BrowserRouter>
     )

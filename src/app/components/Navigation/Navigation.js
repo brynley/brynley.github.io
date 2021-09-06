@@ -11,8 +11,8 @@ export default class Navigation extends PureComponent {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/login">
-            Login
+          <NavLink to="/about">
+            About
           </NavLink>
         </li>
         <li>
