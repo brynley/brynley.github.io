@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./build/",
+    "target": "es5",
+    "module": "commonjs",
+    "jsx": "react",
+    "lib": ["es6", "dom"],
+
+    "strict": false,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "strictNullChecks": true,
+    "noErrorTruncation": true,
+    "paths": {
+      "@styles/*": ["src/styles/*"],
+      "@themes/*": ["src/themes/*"],
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/components",
+      "./src/styles",
+      "./src/themes"
+    ],
+    "esModuleInterop": true,
+  },
+  "exclude": ["node_modules", "!node_modules/@types"]
+}
