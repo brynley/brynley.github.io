@@ -27,7 +27,7 @@ const fonts = css`
       @font-face {
         font-family: OpenSans;
         src: local('${font.file}'),
-          url('asset/fonts/${font.file}${extension}') format('${extension}');
+          url('assets/fonts/${font.file}${extension}') format('truetype');
         font-weight: ${font.weight};
       }
     `

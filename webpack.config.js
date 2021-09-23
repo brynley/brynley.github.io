@@ -17,17 +17,6 @@ module.exports = {
         test: /\.(ts|tsx|js)$/,
         include: path.resolve(process.cwd(), './src'),
         use: ['babel-loader']
-      },
-      {
-        test: /\.(woff|woff2|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-        exclude: /(node_modules)/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: './assets/fonts/'
-          },
-        },
       }
     ]
   },
