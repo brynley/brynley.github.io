@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 
-import * as Styled from './styles/Error.style'
+import * as Styled from './styles/Error.styles'
 
 export default class Error extends PureComponent {
   render() {

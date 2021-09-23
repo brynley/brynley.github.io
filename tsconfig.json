@@ -17,8 +17,10 @@
     "strictNullChecks": true,
     "noErrorTruncation": true,
     "paths": {
+      "@assets/*": ["src/assets/*"],
       "@styles/*": ["src/styles/*"],
       "@themes/*": ["src/themes/*"],
+      "@components/*": ["src/app/components/*"],
     },
     "typeRoots": [
       "./node_modules/@types",

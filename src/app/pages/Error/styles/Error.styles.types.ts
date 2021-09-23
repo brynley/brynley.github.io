@@ -1,5 +1,5 @@
 import { Theme } from '@themes/themes.types'
 
-export interface ErrorStyleProps {
+export interface ErrorStylesProps {
   theme: Theme
 }

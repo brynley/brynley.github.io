@@ -1,4 +1,4 @@
-type ColorKeys =
+export type ColorKeys =
   | 'primary'
   | 'secondary'
   | 'tertiary'
