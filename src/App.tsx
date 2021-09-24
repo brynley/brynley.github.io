@@ -15,22 +15,21 @@ export default class App extends React.Component {
     return (
       <ThemeProvider theme={brandPink}>
         <brandPink.globalStyles />
-        <Head/>
-        <main>
-          <Base>
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route path="/about">
-                <About />
-              </Route>
-              <Route>
-                <Error />
-              </Route>
-            </Switch>
-          </Base>
-        </main>
+        <Base>
+          <Switch>
+            <Route exact path={Home.pageInfo.path}>
+              <Head pageTitle={Home.pageInfo.title} pagePath={Home.pageInfo.path} />
+              <Home />
+            </Route>
+            <Route path={About.pageInfo.path}>
+              <Head pageTitle={About.pageInfo.title} pagePath={About.pageInfo.path} />
+              <About />
+            </Route>
+            <Route>
+              <Error />
+            </Route>
+          </Switch>
+        </Base>
       </ThemeProvider>
     )
   }
