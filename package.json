@@ -23,7 +23,6 @@
     "@types/react-dom": "^17.0.9",
     "@types/react-helmet": "^6.1.2",
     "@types/react-router-dom": "^5.1.9",
-    "@types/react-svg": "^5.0.0",
     "@types/styled-components": "^5.1.14",
     "babel-loader": "^8.1.0",
     "babel-plugin-module-resolver": "^4.1.0",
