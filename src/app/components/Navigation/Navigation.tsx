@@ -7,7 +7,7 @@ export default class Navigation extends PureComponent {
   render() {
     return (
       <Styled.Navigation>
-        <Styled.LogoWrapper>
+        <Styled.LogoWrapper to="/">
           <Icon name='logo' fill='monochrome1' />
         </Styled.LogoWrapper>
         <Styled.NavList>

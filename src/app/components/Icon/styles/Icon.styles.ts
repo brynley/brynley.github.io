@@ -3,7 +3,7 @@ import { ReactSVG } from 'react-svg'
 
 import { IconStylesProps } from './Icon.styles.types'
 
-export const Icon = styled(ReactSVG)((props: IconStylesProps) => css`
+export const Icon = styled(ReactSVG)<IconStylesProps>((props) => css`
   position: relative;
   width: inherit;
   height: inherit;

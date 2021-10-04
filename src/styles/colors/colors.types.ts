@@ -2,6 +2,7 @@ export type ColorKeys =
   | 'primary'
   | 'secondary'
   | 'tertiary'
+  | 'quaternary'
   | 'monochrome1'
   | 'monochrome2'
   | 'monochrome3'

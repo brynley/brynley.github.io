@@ -19,6 +19,11 @@ const fontFiles = [
     weight: 700,
     file: 'OpenSans-ExtraBold'
   },
+  {
+    weight: 700,
+    file: 'OpenSans-ExtraBoldItalic',
+    fontStyle: 'italic'
+  },
 ]
 
 const fonts = css`
@@ -29,6 +34,9 @@ const fonts = css`
         src: local('${font.file}'),
           url('assets/fonts/${font.file}${extension}') format('truetype');
         font-weight: ${font.weight};
+        ${font.fontStyle && css`
+          font-style: ${font.fontStyle};
+        `}
       }
     `
   })}
