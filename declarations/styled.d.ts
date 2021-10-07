@@ -1,7 +1,8 @@
 import 'styled-components'
 
-import { Spacing } from '@styles/spacing/spacing.types'
 import { Colors } from '@styles/colors/colors.types'
+import { Spacing } from '@styles/spacing/spacing.types'
+import { Breakpoints } from '@styles/breakpoints/breakpoints.types'
 
 export type ThemeNames = 'brandPink'
 
@@ -10,6 +11,7 @@ declare module 'styled-components' {
     name: ThemeNames
     colors: Colors
     spacing: Spacing
+    breakpoints: Breakpoints
     globalStyles: GlobalStyleComponent<{}, DefaultTheme>
   }
 }

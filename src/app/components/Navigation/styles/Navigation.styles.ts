@@ -12,7 +12,7 @@ export const Navigation = styled.nav((props) => css`
 export const LogoWrapper = styled(NavLinkDom)((props) => css`
   width: ${props.theme.spacing[10]}px;
   height: ${props.theme.spacing[10]}px;
-  margin: ${props.theme.spacing[4]}px 0;
+  margin: ${props.theme.spacing[2]}px 0;
 `)
 
 export const NavList = styled.ul`
