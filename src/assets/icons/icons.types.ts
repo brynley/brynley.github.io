@@ -1,1 +1,1 @@
-export type IconNames = 'logo' | 'menu'
+export type IconNames = 'logo' | 'menu' | 'home'

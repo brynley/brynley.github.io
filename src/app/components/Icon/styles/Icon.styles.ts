@@ -1,7 +1,25 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 import { ReactSVG } from 'react-svg'
 
 import { IconStylesProps } from './Icon.styles.types'
+
+function getStrokeAndFill(props: IconStylesProps) {
+  let fillReturn
+  let strokeReturn
+
+  if (props.fill === 'none') fillReturn = css`
+    fill: 'none';
+  `
+
+  if (props.stroke === 'none') strokeReturn = css`
+    stroke: 'none';
+  `
+
+
+  return css`
+  
+  `
+}
 
 export const Icon = styled(ReactSVG)<IconStylesProps>((props) => css`
   position: relative;
@@ -15,7 +33,8 @@ export const Icon = styled(ReactSVG)<IconStylesProps>((props) => css`
     svg {
       width: inherit;
       height: inherit;
-      fill: ${props.fill ? props.theme.colors[props.fill] : props.theme.colors.monochrome4};
+      fill: ${props.fill === 'none' ? 'none' : props.theme.colors[props.fill]};
+      stroke: ${props.stroke === 'none' ? 'none' : props.theme.colors[props.stroke]};
     }
   }
 `)

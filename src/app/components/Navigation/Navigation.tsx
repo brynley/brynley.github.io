@@ -23,7 +23,7 @@ const Navigation = () => {
               <Styled.NavListItem>
                 <Styled.NavLink to={navItem.to}>
                   <Styled.NavItemIcon>
-                    <Icon name='menu' fill='monochrome4' />
+                    <Icon name='home' stroke='monochrome4' fill='none'/>
                   </Styled.NavItemIcon>
                   {navItem.text}
                 </Styled.NavLink>

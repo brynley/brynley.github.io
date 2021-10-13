@@ -76,6 +76,13 @@ export const NavItemIcon = styled.span((props) => css`
   ${props.theme.mixins.mediaQueries.laptop(css`
     display: none;
   `)};
+
+  .homeIconWrapper {
+    .eye1,
+    .eye2 {
+      fill: ${props.theme.colors.monochrome4};
+    }
+  }
 `)
 
 export const NavListItem = styled.li`

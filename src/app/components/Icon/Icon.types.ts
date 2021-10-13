@@ -3,5 +3,6 @@ import { ColorKeys } from '@styles/colors/colors.types'
 
 export interface IconTypes {
   name: IconNames
-  fill?: ColorKeys
+  fill?: ColorKeys | 'none'
+  stroke?: ColorKeys | 'none'
 }
