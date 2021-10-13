@@ -69,8 +69,8 @@ export const NavList = styled.ul((props) => css`
 
 export const NavItemIcon = styled.span((props) => css`
   display: block;
-  width: ${props.theme.spacing[6]}px;
-  height: ${props.theme.spacing[6]}px;
+  width: ${props.theme.spacing[8]}px;
+  height: ${props.theme.spacing[8]}px;
   cursor: pointer;
 
   ${props.theme.mixins.mediaQueries.laptop(css`
