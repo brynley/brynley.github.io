@@ -8,6 +8,11 @@ const globals = createGlobalStyle((props) => css`
     font-family: OpenSans, Arial, Helvetica, sans-serif;
     font-weight: 400;
     background-color: ${props.theme.colors.quaternary};
+    font-size: 16px;
+
+    ${props.theme.mixins.mediaQueries.laptop(css`
+      font-size: 18px;
+    `)}
   }
 
   ${fonts}

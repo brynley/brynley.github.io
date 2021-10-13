@@ -1,29 +1,39 @@
-import React, { PureComponent } from "react"
+import React from "react"
 
 import Icon from '@components/Icon'
 
 import navItems from './constants/navItems'
 
 import * as Styled from './styles/Navigation.styles'
-export default class Navigation extends PureComponent {
-  render() {
-    return (
-      <Styled.Navigation>
-        <Styled.LogoWrapper to="/">
-          <Icon name='logo' fill='monochrome1' />
-        </Styled.LogoWrapper>
+
+const Navigation = () => {
+  function handleMenuClick() {
+    console.log('open menu')
+  }
+
+  return (
+    <Styled.Navigation>
+      <Styled.LogoWrapper to="/">
+        <Icon name='logo' fill='monochrome1' />
+      </Styled.LogoWrapper>
+      <Styled.Nav>
         <Styled.NavList>
           {navItems.map((navItem) => {
             return (
               <Styled.NavListItem>
                 <Styled.NavLink to={navItem.to}>
+                  <Styled.NavItemIcon>
+                    <Icon name='menu' fill='monochrome4' />
+                  </Styled.NavItemIcon>
                   {navItem.text}
                 </Styled.NavLink>
               </Styled.NavListItem>
             )
           })}
         </Styled.NavList>
-      </Styled.Navigation>
-    )
-  }
+      </Styled.Nav>
+    </Styled.Navigation>
+  )
 }
+
+export default Navigation

@@ -2,28 +2,22 @@ import { FlattenSimpleInterpolation, css } from 'styled-components'
 
 import breakpoints from '@styles/breakpoints'
 
-function tablet(styles: FlattenSimpleInterpolation) {
-  return css`
-    @media (min-width: ${breakpoints.tablet}) {
-      ${styles}
-    }
-  `
-}
+const tablet = (styles: FlattenSimpleInterpolation) => css`
+  @media (min-width: ${breakpoints.tablet}px) {
+    ${styles}
+  }
+`
 
-function laptop(styles: FlattenSimpleInterpolation) {
-  return css`
-    @media (min-width: ${breakpoints.laptop}) {
-      ${styles}
-    }
-  `
-}
+const laptop = (styles: FlattenSimpleInterpolation) => css`
+  @media (min-width: ${breakpoints.laptop}px) {
+    ${styles}
+  }
+`
 
-function desktop(styles: FlattenSimpleInterpolation) {
-  return css`
-    @media (min-width: ${breakpoints.desktop}) {
-      ${styles}
-    }
-  `
-}
+const desktop = (styles: FlattenSimpleInterpolation) => css`
+  @media (min-width: ${breakpoints.desktop}px) {
+    ${styles}
+  }
+`
 
 export default { tablet, laptop, desktop }

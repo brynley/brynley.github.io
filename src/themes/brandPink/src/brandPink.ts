@@ -2,6 +2,7 @@ import { DefaultTheme } from 'styled-components'
 
 import spacing from '@styles/spacing'
 import breakpoints from '@styles/breakpoints'
+import mixins from '@styles/mixins'
 import globals from '@styles/globals'
 
 const brandPink: DefaultTheme = {
@@ -19,6 +20,7 @@ const brandPink: DefaultTheme = {
   },
   spacing,
   breakpoints,
+  mixins,
   globalStyles: globals,
 }
 
