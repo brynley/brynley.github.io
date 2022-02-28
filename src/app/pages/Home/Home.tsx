@@ -1,13 +1,21 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 
-export default class Home extends PureComponent {
-  public static pageInfo = {
-    name: 'Home',
-    title: 'Brynley Langman',
-    path: '/'
-  }
+import Icon from '@components/Icon'
 
-  render() {
-    return <h1>Home</h1>
-  }
+import * as Styled from './styles/Home.styles'
+
+const Home = () => {
+    return (
+      <Styled.Home>
+        <Styled.Header>
+          <Styled.Heading><span>Brynley</span><span>Langman</span><span>Creative</span><span>Engineer</span></Styled.Heading>
+          {/* Explore using accelerometer on mobile here */}
+          <Styled.LogoWrapper>
+            <Icon name='logo' fill='monochrome1'/>
+          </Styled.LogoWrapper>
+        </Styled.Header>
+      </Styled.Home>
+    )
 }
+
+export default Home

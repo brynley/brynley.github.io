@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 
 const extension = '.ttf'
 
-const fontFiles = [
+const primaryFontFiles = [
   {
     weight: 400,
     file: 'OpenSans-Regular'
@@ -26,8 +26,15 @@ const fontFiles = [
   },
 ]
 
+const secondaryFontFiles = [
+  {
+    weight: 400,
+    file: 'DMSerifDisplay-Regular',
+  },
+]
+
 const fonts = css`
-  ${fontFiles.map((font) => {
+  ${primaryFontFiles.map((font) => {
     return css`
       @font-face {
         font-family: OpenSans;
@@ -37,6 +44,16 @@ const fonts = css`
         ${font.fontStyle && css`
           font-style: ${font.fontStyle};
         `}
+      }
+    `
+  })}
+  ${secondaryFontFiles.map((font) => {
+    return css`
+      @font-face {
+        font-family: DMSerifDisplay;
+        src: local('${font.file}'),
+          url('assets/fonts/${font.file}${extension}') format('truetype');
+        font-weight: ${font.weight};
       }
     `
   })}

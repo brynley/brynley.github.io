@@ -5,4 +5,5 @@ export interface IconTypes {
   name: IconNames
   fill?: ColorKeys | 'none'
   stroke?: ColorKeys | 'none'
+  className?: string
 }

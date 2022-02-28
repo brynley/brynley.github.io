@@ -1,14 +1,20 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import Navigation from '../../components/Navigation'
+import Head from '@components/Head'
 
-export default class Base extends PureComponent {
+import { BaseTypes } from './Base.types'
 
-  render() {
-    return (
-      <main>
-        <Navigation />
-        {this.props.children}
-      </main>
-    )
-  }
+const Base = ({ pageTitle, pagePath, children }: BaseTypes) => {
+
+  return (
+    <>
+    <Head pageTitle={pageTitle} pagePath={pagePath} />
+    <main>
+      <Navigation />
+      {children}
+    </main>
+    </>
+  )
 }
+
+export default Base

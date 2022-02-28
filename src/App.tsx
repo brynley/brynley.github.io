@@ -4,33 +4,34 @@ import { Route, Switch } from 'react-router-dom'
 
 import { brandPink } from './themes'
 
-import Head from './app/components/Head'
 import Base from './app/templates/Base'
-import Home from './app/pages/Home'
+import Home, { homePageInfo } from './app/pages/Home'
 import About from './app/pages/About'
 import Error from './app/pages/Error'
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <ThemeProvider theme={brandPink}>
-        <brandPink.globalStyles />
-        <Base>
-          <Switch>
-            <Route exact path={Home.pageInfo.path}>
-              <Head pageTitle={Home.pageInfo.title} pagePath={Home.pageInfo.path} />
+const App = () => {
+  return (
+    <ThemeProvider theme={brandPink}>
+      <brandPink.globalStyles />
+      
+        <Switch>
+          <Route exact path={homePageInfo.path}>
+            <Base pageTitle={homePageInfo.title} pagePath={homePageInfo.path}>
               <Home />
-            </Route>
-            <Route path={About.pageInfo.path}>
-              <Head pageTitle={About.pageInfo.title} pagePath={About.pageInfo.path} />
+            </Base>
+          </Route>
+          <Route path={About.pageInfo.path}>
+            <Base pageTitle={About.pageInfo.title} pagePath={About.pageInfo.path}>
               <About />
-            </Route>
-            <Route>
-              <Error />
-            </Route>
-          </Switch>
-        </Base>
-      </ThemeProvider>
-    )
-  }
+            </Base>
+          </Route>
+          <Route>
+            <Error />
+          </Route>
+        </Switch>
+      
+    </ThemeProvider>
+  )
 }
+
+export default App
