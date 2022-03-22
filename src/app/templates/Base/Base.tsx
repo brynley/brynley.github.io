@@ -10,8 +10,8 @@ const Base = ({ pageTitle, pagePath, children }: BaseTypes) => {
     <>
     <Head pageTitle={pageTitle} pagePath={pagePath} />
     <main>
-      <Navigation />
       {children}
+      <Navigation />
     </main>
     </>
   )

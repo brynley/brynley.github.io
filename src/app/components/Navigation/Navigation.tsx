@@ -13,25 +13,24 @@ const Navigation = () => {
 
   return (
     <Styled.Navigation>
-      <Styled.LogoWrapper to="/">
-        <Icon name='logo' fill='monochrome1' />
-      </Styled.LogoWrapper>
-      <Styled.Nav>
-        <Styled.NavList>
-          {navItems.map((navItem) => {
-            return (
-              <Styled.NavListItem>
-                <Styled.NavLink to={navItem.to}>
-                  <Styled.NavItemIcon>
-                    <Icon name='home' stroke='monochrome4' fill='none'/>
-                  </Styled.NavItemIcon>
-                  {navItem.text}
-                </Styled.NavLink>
-              </Styled.NavListItem>
-            )
-          })}
-        </Styled.NavList>
-      </Styled.Nav>
+      <Styled.NavigationWrapper>
+        <Styled.LogoWrapper to="/">
+          <Icon name='logo' fill='monochrome1' />
+        </Styled.LogoWrapper>
+        <Styled.Nav>
+          <Styled.NavList>
+            {navItems.map((navItem) => {
+              return (
+                <Styled.NavListItem>
+                  <Styled.NavLink to={navItem.to}>
+                    {navItem.text}
+                  </Styled.NavLink>
+                </Styled.NavListItem>
+              )
+            })}
+          </Styled.NavList>
+        </Styled.Nav>
+      </Styled.NavigationWrapper>
     </Styled.Navigation>
   )
 }
