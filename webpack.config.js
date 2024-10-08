@@ -6,7 +6,7 @@ module.exports = {
   entry: path.resolve(process.cwd(), './src/index.tsx'),
   output: {
     path: path.resolve(process.cwd(), './build'),
-    filename: 'bundle.[hash].js',
+    filename: 'bundle.[fullhash].js',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
